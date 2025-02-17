@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Preahvihear&family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Preahvihear&family=Sigmar&display=swap" rel="stylesheet">
+    <title>kathakali</title>
+</head>
+<body>
+    <section>
+        <video src="smoke.mp4" autoplay muted></video>
+        <h1>
+            <span>K</span>
+            <span>A</span>
+            <span>T</span>
+            <span>H</span>
+            <span>A</span>
+            <span>K</span>
+            <span>A</span>
+            <span>L</span>
+            <span>I</span>
+        </h1>
+    </section>
+    <div class="main">
+        <div class="video-container">
+            <video id="bg-video" autoplay muted loop>
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+        </div>      
+        <div class="navbar">
+            <div class="links">
+                <button id="home" onclick="location.href='index.html'">HOME</button>
+                <button id="about" onclick="location.href='about.html'">ABOUT</button>
+                <button id="projects" onclick="location.href='projects.html'">PROJECTS</button>
+                <button id="contact" onclick="location.href='contact.html'">CONTACT</button>
+                <select>
+                    <option value="" selected disabled hidden>COMPLEMENTARY</option> 
+                    <option>QUICK LINKS</option>
+                    <option>YOUR MENTAL SUPPORT</option>
+                    <option>INTERNSHIPS/JOBS</option>
+                    <option>STUDY MATERIALS</option>
+                </select>
+            </div>
+            
+            <div class="btn">
+                <button id="login">LOG IN</button>
+                <button id="lajjabati">TOUCH ME NOT</button>
+                <button id="vi">VIRTUAL ASSISTANT</button>
+            </div>
+        </div>
+        <div class="next">
+            <p id="greeting">
+                
+            </p>
+            <p id="base"> </p>
+            <div id="intro">
+                Here you can know my professional side of life, my works, projects and how you can be involved in my works.For a better engagement for you, I have made three different modes for this site. Go to the top-right corner and explore the three buttons. All navigatora are at your left, big and bold. </p>
+                Log In if you already know me!</p>
+                Hope you Enjoy!
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentPage = window.location.pathname;
+            var homeButton = document.getElementById('home');
+            var aboutButton = document.getElementById('about');
+            var projectsButton = document.getElementById('projects');
+            var contactButton = document.getElementById('contact');
+    
+            if (currentPage.endsWith('index.html') || currentPage === '/') {
+                homeButton.classList.add('active');
+            } else if (currentPage.endsWith('about.html')) {
+                aboutButton.classList.add('active');
+            } else if (currentPage.endsWith('projects.html')) {
+                projectsButton.classList.add('active');
+            } else if (currentPage.endsWith('contact.html')) {
+                contactButton.classList.add('active');
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
